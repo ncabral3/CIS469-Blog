@@ -5,17 +5,28 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: rgb(243, 243, 243);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  border: 1px solid #000000;
+  border-radius: 15%;
+  background-color: #d1d8f0; /* Set a background color for the entire page */
+}
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #282c79;
   text-decoration: inherit;
 }
 a:hover {
@@ -26,6 +37,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  font-family: 'Abel', sans-serif;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -54,15 +66,3 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
