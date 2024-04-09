@@ -6,6 +6,9 @@ import password_icon from '../Components/Objects/padlock.png';
 import './css/login.css';
 
 const Login = () => { 
+
+    
+
     return (
         <>
             <title>Blog - Login</title>
