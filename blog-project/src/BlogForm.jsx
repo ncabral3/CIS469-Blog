@@ -31,6 +31,7 @@ const BlogForm = ({ onSubmit }) => {
       <input type="file" id="image" accept="image/*" onChange={handleImageChange} />
 
       <button type="submit">Submit</button>
+      Submit
     </form>
   );
 };
