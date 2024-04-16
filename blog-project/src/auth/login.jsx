@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import user_icon from '../Components/Objects/user-interface.png';
 import password_icon from '../Components/Objects/padlock.png';
 
-import './css/login.css';
-
 const Login = () => { 
 
-    
+   //Compare the username and password to credentials in the mongodb database
+   //if the username and password are valid in the mongodb database then direct the user to the main blog page
+   //if the username and password are not valid in the mongodb database then provide a toast message that the username and password are incorrect
+   //Also provide toast messages for valid login
 
     return (
         <>
