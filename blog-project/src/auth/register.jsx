@@ -7,7 +7,8 @@ import password_icon from '../Components/Objects/padlock.png';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Flip } from 'react-toastify';
-
+import fs from 'fs';
+//import axios from 'axios';
 
 const Register = () => {
     const [username, setUsername] = useState('');
@@ -47,13 +48,17 @@ const Register = () => {
                 });
             return;
         }
-
-        // Save user data to local storage
-        const userData = {
-            username,
-            password,
+        const data = {
+            username: username,
+            password: password,
         };
-        localStorage.setItem('userData', JSON.stringify(userData));
+        fs.writeFile(
+            "users.json",
+            JSON.stringify(data),
+            err => {
+                if (err) throw err;
+                console.log("Done writing");
+            });
 
         // Clear input fields
         setUsername('');
