@@ -30,7 +30,7 @@ const BlogForm = ({ onSubmit }) => {
       <label htmlFor="image">Image:</label>
       <input type="file" id="image" accept="image/*" onChange={handleImageChange} />
 
-      <button type="submit">Submit</button>
+      <button className = {'submit'} type="submit">Submit</button>
       Submit
     </form>
   );
