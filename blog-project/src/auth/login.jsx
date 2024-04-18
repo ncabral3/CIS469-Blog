@@ -43,6 +43,8 @@ const Login = () => {
                 theme: "light",
                 transition: Flip,
                 });
+            window.location.href = '/home';
+
         } else {
             // Invalid credentials
             toast.error('Invalid username or password', {
@@ -87,7 +89,7 @@ const Login = () => {
                             onChange={handlePasswordChange}
                         />
                     </div>
-                    <button type='submit' className='submit'>
+                    <button type='signin' className='signin'>
                         Sign In
                     </button>
                     <Link to='/register'>

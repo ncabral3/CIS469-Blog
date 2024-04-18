@@ -1,30 +1,28 @@
-/* Need to install Bootstrap CSS for full funcionality */
-
-import React, { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+import "/Users/ncabr/Desktop/CIS469Project/CIS469-Blog/blog-project/src/Home/css/Home.css"; // Assuming the path is relative to the current file
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-    const [thread, setThread] = useState("");
-    const [posts, setPosts] = useState([]);
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log({ thread });
-        setThread("");
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        window.location.href = '/create';
     };
-
     return (
-        <div className="home d-flex flex-column align-items-center " style={{ height: "100vh" }}>
-            <div className="text-center">
-                <h1 className="homeTitle" style={{ width: "220vh", fontWeight: "bold" }}>Welcome to the Blog Forum</h1>
-                <p className="homeDescription">Share your thoughts, ideas, and stories with others!</p>
+        <div className="home"> 
+            <div className="home_header">
+                <h1>Blogs</h1>
             </div>
-            <form onSubmit={handleSubmit} className="button">
-                <button type="submit" className="btn btn-primary">CREATE POST</button>
-            </form>
-            <div className="Blogposts align-items-center">
-                <h2 className="mb-4" style={{ width: "200vh" }}>Blog Posts</h2>
-                {/* Placeholder for displaying blog posts */}
+
+            <div className="home_container">
+            </div>
+            <div className="create-container">
+            <form onSubmit={handleSubmit}>
+                    <button className="create_button" type="submit">Create Post</button>
+                    <Link to='/'>
+                    <button className="logout" type="logout">Log Out</button>
+                    </Link>
+                </form>
             </div>
         </div>
     );

@@ -1,0 +1,69 @@
+.home_container {
+    display: flex;
+    width: 90%; /* Adjust this percentage as needed */
+    height: 660px; /* Adjust this percentage as needed */
+    max-width: 1400px;
+    margin: auto;
+    padding: 2%; /* Adjust this percentage as needed */
+    border: 3px solid #6c6c6c;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: #000 2px 2px 5px 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home_header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    position: absolute;
+    top: calc(50% - 53% - 10px); /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.create_button {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 40px;
+    width: 115px;
+    background-color: #ffffff;
+    color: #000;
+    top: calc(50% + 44.5%); /* Adjust this percentage as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #797979;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Adding transition for smooth effect */
+}
+.create_button:hover {
+    border: 2px solid #797979;
+    background-color: #d8d8d8; /* Change background color on hover */
+    color: #000000; /* Change text color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+.logout {
+    display: flex;
+    justify-content: flex-end; /* Align the button to the right */
+    align-items: center; /* Center the text vertically */
+    position: fixed; /* Position the button relative to the viewport */
+    top: 5px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    height: 40px;
+    width: 90px;
+    background-color: #ffffff;
+    color: #000;
+    border: 2px solid #797979;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.abel-regular {
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

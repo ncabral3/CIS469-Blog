@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './css/BlogForm.css';
 
 const BlogForm = ({ onSubmit }) => {
   const [title, setTitle] = useState('');
@@ -20,6 +21,7 @@ const BlogForm = ({ onSubmit }) => {
   };
 
   return (
+    <div className="blog-form">
     <form onSubmit={handleSubmit}>
       <label htmlFor="title">Title:</label>
       <input type="text" id="title" value={title} onChange={handleTitleChange} />
@@ -31,8 +33,9 @@ const BlogForm = ({ onSubmit }) => {
       <input type="file" id="image" accept="image/*" onChange={handleImageChange} />
 
       <button className = {'submit'} type="submit">Submit</button>
-      Submit
     </form>
+    </div>
+    
   );
 };
 

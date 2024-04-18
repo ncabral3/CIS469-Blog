@@ -81,17 +81,16 @@ input[type='password'] {
   color: inherit;
   width: 50%;
   left: 50%;
-  transform: translate(50%, 200%);
+  transform: translate(435%, 950%); /* Updated the translate value to move the button below */
   margin: 0 auto;
   padding: 0px;
   border: none;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color:transparent;
   color: black;
   font-size: 16px;
   text-decoration: underline;
   cursor: pointer;
-
 }
 .Toastify__toast-container {
     position: fixed;
