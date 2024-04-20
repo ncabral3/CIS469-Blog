@@ -14,7 +14,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.home_post{
+    color : #000;
 
+}
+.home_post h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000;
+}
 .home_header {
     display: flex;
     justify-content: center;

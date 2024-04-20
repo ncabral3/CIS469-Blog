@@ -81,11 +81,11 @@ input[type='password'] {
   color: inherit;
   width: 50%;
   left: 50%;
-  transform: translate(435%, 950%); /* Updated the translate value to move the button below */
+  transform: translate(50%, 220%);
   margin: 0 auto;
   padding: 0px;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   background-color:transparent;
   color: black;
   font-size: 16px;
