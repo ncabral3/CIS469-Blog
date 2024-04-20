@@ -26,6 +26,7 @@ const BlogForm = ({ onSubmit }) => {
 
         <Link to='/home'>
         <button className="submit" type="submit">Submit</button>
+        
         </Link>
 
         <Link to='/home'>
