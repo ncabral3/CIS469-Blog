@@ -7,7 +7,8 @@ import password_icon from '../Components/Objects/padlock.png';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Flip } from 'react-toastify';
-import fs from 'fs';
+
+
 //import axios from 'axios';
 
 const Register = () => {
@@ -48,23 +49,7 @@ const Register = () => {
                 });
             return;
         }
-        const data = {
-            username: username,
-            password: password,
-        };
-        fs.writeFile(
-            "users.json",
-            JSON.stringify(data),
-            err => {
-                if (err) throw err;
-                console.log("Done writing");
-            });
-
-        // Clear input fields
-        setUsername('');
-        setPassword('');
-        setConfirmPassword('');
-
+        
         toast.success('Registration Successful!', {
             position: "top-center",
             autoClose: 2801,
@@ -77,6 +62,12 @@ const Register = () => {
             theme: "light",
             transition: Flip,
             });
+        
+    
+        setUsername('');
+        setPassword('');
+        setConfirmPassword('');
+
     }
 
     return (

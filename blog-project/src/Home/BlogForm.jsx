@@ -27,7 +27,12 @@ const BlogForm = ({ addBlog }) => {
         <textarea id="content" value={content} onChange={handleContentChange} />
 
         {/* Use a regular button for form submission */}
+        <Link to ='/home'>
+        <button className = "back2" type="submit">&#8592;</button>
+        </Link>
+        <Link to ='/home'>
         <button className="create_button" type="submit">Create Post</button>
+        </Link>
       </form>
     </div>
   );

@@ -14,10 +14,70 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99999;
+    overflow-y: scroll;
 }
+.blogContent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    color : #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.blog-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 5px;
+    color : #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.blog-title{
+    display: flex;
+    flex-direction: column;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    color : #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.blog-content-text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    color : #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .home_post{
     color : #000;
 
+}
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #a4a4a4; /* Adjust the color as needed */
+    margin: 10px 0; /* Adjust the margin as needed */
 }
 .home_post h2 {
     font-size: 24px;
@@ -36,7 +96,7 @@
     transform: translateX(-50%);
 }
 
-.create_button {
+.create-button-home {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -51,7 +111,7 @@
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s; /* Adding transition for smooth effect */
 }
-.create_button:hover {
+.create-button-home:hover {
     border: 2px solid #797979;
     background-color: #d8d8d8; /* Change background color on hover */
     color: #000000; /* Change text color on hover */
