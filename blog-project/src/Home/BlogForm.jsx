@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './css/BlogForm.css';
 import { Link } from 'react-router-dom';
+import './css/BlogForm.css';
 
-const BlogForm = ({ onSubmit }) => {
+const BlogForm = ({ addBlog }) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
@@ -11,7 +11,9 @@ const BlogForm = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ title, content });
+    // Call the addBlog function passed from Home.jsx
+    addBlog({ title, content });
+    console.log('Blog added:', { title, content });
     setTitle('');
     setContent('');
   };
@@ -24,14 +26,8 @@ const BlogForm = ({ onSubmit }) => {
         <label htmlFor="content">Content:</label>
         <textarea id="content" value={content} onChange={handleContentChange} />
 
-        <Link to='/home'>
-        <button className="submit" type="submit">Submit</button>
-        
-        </Link>
-
-        <Link to='/home'>
-        <button className = "back2" type="button">&#8592;</button>
-        </Link>
+        {/* Use a regular button for form submission */}
+        <button className="create_button" type="submit">Create Post</button>
       </form>
     </div>
   );

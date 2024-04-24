@@ -1,25 +1,23 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react';
-import "/Users/ncabr/Desktop/CIS469Project/CIS469-Blog/blog-project/src/Home/css/Home.css"; // Assuming the path is relative to the current file
+import React, { useState } from 'react';
+import './css/Home.css';
 import { Link } from 'react-router-dom';
 import BlogForm from './BlogForm';
-import { useState } from 'react';
 
 const Home = () => {
-    const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState([]);
 
-  // Function to handle submitting blog post data
-  const handleSubmit = (blogData) => {
+  // Function to handle adding new blog post
+  const addBlog = (blogData) => {
     setBlogs([...blogs, blogData]);
   };
-    return (
-        <div className="home"> 
-            <div className="home_header">
-                <h1>BLOGS</h1>
-            </div>
 
-            <div className="home_container">
-        {/* Map over submitted blog posts and render them */}
+  return (
+    <div className="home"> 
+      <div className="home_header">
+        <h1>BLOGS</h1>
+      </div>
+
+      <div className="home_container">
         {blogs.map((blog, index) => (
           <div key={index} className="blog">
             <h2>{blog.title}</h2>
@@ -28,18 +26,17 @@ const Home = () => {
         ))}
       </div>
 
-            <div className="create-container">
-            <form onSubmit={handleSubmit}>
-                    <Link to='/create'>
-                    <button className="create_button" type="submit">Create Post</button>
-                    </Link>
-                    <Link to='/'>
-                    <button className="logout" type="logout">Log Out</button>
-                    </Link>
-                </form>
-            </div>
-        </div>
-    );
+      <div className="create-container">
+        {/* Pass addBlog function as a prop to BlogForm */}
+        <Link to='/'>
+          <button className="logout" type="button">Log Out</button>
+        </Link>
+        <Link to='/create'>
+        <button className="create_button" type="button">Create</button>
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default Home;

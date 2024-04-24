@@ -15,6 +15,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 0;
 }
 .blog-form form {
     display: flex;
@@ -60,6 +61,7 @@
     box-shadow: #000 2px 2px 5px 0px;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s; /* Adding transition for smooth effect */
+    z-index: 99999;
 }
 .submit:hover {
     border: 2px solid #797979;
@@ -93,15 +95,3 @@
     cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-
-
-
-
-
-
-  /* display: flex;
-    position: fixed;
-    top: 430px;
-    left: 20px; 
-    height: 25px;
-    width: 40px; */
