@@ -9,7 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     // Read JSON file
-    fetch(blogData)
+    fetch()
       .then(response => response.json())
       .then(data => {
         // Extract title and content from JSON data
