@@ -1,4 +1,4 @@
-# Project Name
+# Simple Blog Project
 
 A simple prototype of a potential blog page
 
