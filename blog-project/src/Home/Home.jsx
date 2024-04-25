@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './css/Home.css';
 import { Link } from 'react-router-dom';
 import BlogForm from './BlogForm';
-import blogData from '/Users/ncabr/Desktop/CIS469Project/CIS469-Blog/blog-project/src/blog.json';
+
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
